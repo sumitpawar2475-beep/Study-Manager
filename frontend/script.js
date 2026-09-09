@@ -1,6 +1,9 @@
 // Store all tasks
-let tasks = [];
+let tasks = JSON.parse(localStorage.getItem("studentTasks")) || [];
 
+function saveTasks() {
+    localStorage.setItem("studentTasks", JSON.stringify(tasks));
+}
 
 // Add a new task
 function addTask() {
@@ -28,6 +31,7 @@ function addTask() {
 
     // Add task to array
     tasks.push(task);
+    saveTasks();
 
     // Clear form
     document.getElementById("taskTitle").value = "";
@@ -132,7 +136,7 @@ function completeTask(id) {
     if (task) {
         task.completed = !task.completed;
     }
-
+    saveTasks();
     displayTasks();
 }
 
@@ -143,7 +147,7 @@ function deleteTask(id) {
     tasks = tasks.filter(function(task) {
         return task.id !== id;
     });
-
+    saveTasks();
     displayTasks();
 }
 
@@ -164,7 +168,7 @@ function editTask(id) {
     if (newTitle !== null && newTitle.trim() !== "") {
         task.title = newTitle;
     }
-
+    saveTasks();
     displayTasks();
 }
 

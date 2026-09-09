@@ -1,10 +1,10 @@
 ## 📸 Screenshots
 
 ### Dashboard
-![Dashboard](assets/screenshots/dashboard.png)
+![Dashboard](assets/Screenshots/dashboard.png)
 
 ### Add Task
-![Add Task](assets/screenshots/add-task.png)
+![Add Task](assets/Screenshots/add-task.png)
 
 ### Completed Tasks
-![Completed Tasks](assets/screenshots/completed-task.png)
+![Completed Tasks](assets/Screenshots/completed-task.png)
